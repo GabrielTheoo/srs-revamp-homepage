@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRS — Style Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" />
+  <link rel="stylesheet" href="./shared/base.css" />
+  <link rel="stylesheet" href="./shared/components.css" />
+  <style>
+    .sg-section { padding: var(--s-7) 0; border-bottom: 1px solid var(--c-line); }
+    .sg-grid { display: grid; gap: var(--s-4); }
+    .sg-grid--colors { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+    .sg-swatch { border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--c-line); }
+    .sg-swatch__chip { aspect-ratio: 4/3; }
+    .sg-swatch__meta { padding: var(--s-3); background: var(--c-white); font-size: var(--t-sm); }
+    .sg-swatch__meta strong { display: block; }
+    .sg-swatch__meta code { font-family: ui-monospace, monospace; color: var(--c-gray); }
+    .sg-row { display: flex; gap: var(--s-3); flex-wrap: wrap; align-items: center; }
+    .sg-card { padding: var(--s-5); border: 1px solid var(--c-line); border-radius: var(--r-md); background: var(--c-white); }
+  </style>
+</head>
+<body>
+  <header class="container" style="padding-top: var(--s-7);">
+    <p class="eyebrow">Style guide</p>
+    <h1 style="font-size: var(--t-3xl);">Surgical Recovery Systems · Design system</h1>
+    <p class="lede" style="max-width: 60ch; color: var(--c-gray-dark);">Verification page for tokens and components. Compare to <code>Colors.pdf</code>.</p>
+  </header>
+
+  <section class="sg-section container">
+    <h2 style="font-size: var(--t-2xl); margin-bottom: var(--s-5);">Color</h2>
+    <div class="sg-grid sg-grid--colors">
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#284169"></div><div class="sg-swatch__meta"><strong>Dark Blue</strong><code>#284169</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#1E293B"></div><div class="sg-swatch__meta"><strong>Darker Blue</strong><code>#1E293B</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#B4D7F0"></div><div class="sg-swatch__meta"><strong>Light Blue</strong><code>#B4D7F0</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#FFFFFF; border:1px solid var(--c-line)"></div><div class="sg-swatch__meta"><strong>White</strong><code>#FFFFFF</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#F7F3EC"></div><div class="sg-swatch__meta"><strong>Cream (derived)</strong><code>#F7F3EC</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#EAF2FA"></div><div class="sg-swatch__meta"><strong>Blue Wash</strong><code>#EAF2FA</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#59595B"></div><div class="sg-swatch__meta"><strong>Gray</strong><code>#59595B</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#3B3B3B"></div><div class="sg-swatch__meta"><strong>Dark Gray</strong><code>#3B3B3B</code></div></div>
+      <div class="sg-swatch"><div class="sg-swatch__chip" style="background:#000000"></div><div class="sg-swatch__meta"><strong>Black</strong><code>#000000</code></div></div>
+    </div>
+  </section>
+
+  <section class="sg-section container">
+    <h2 style="font-size: var(--t-2xl); margin-bottom: var(--s-5);">Typography</h2>
+    <p class="eyebrow">Eyebrow / overline · Afacad 12 / 0.18em</p>
+    <h1 style="margin-top: var(--s-4);">Display 1 · Alegreya SC</h1>
+    <h2>Display 2 · Sleep again. <em style="color:var(--c-blue-dark)">Recover better.</em></h2>
+    <h3>Section heading · Alegreya SC 28</h3>
+    <p class="lede" style="max-width: 60ch;">Lede paragraph · Afacad 18/21px. The clinically positioned pillow system designed for surgery recovery — so you can rest in your own bed, not stuck in a recliner.</p>
+    <p style="max-width: 60ch;">Body paragraph · Afacad 16. Restore You is an FDA-registered therapeutic support system designed around the Maximally Loose Packed Position. It cradles your arm, off-loads your shoulder, and lets you sleep on your back or your good side, in your own bed, from night one.</p>
+  </section>
+
+  <section class="sg-section container">
+    <h2 style="font-size: var(--t-2xl); margin-bottom: var(--s-5);">Buttons &amp; links</h2>
+    <div class="sg-row">
+      <a href="#" class="btn btn--primary">Shop Restore You <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#" class="btn btn--ghost">Talk to us first</a>
+      <a href="#" class="btn btn--light">Light variant</a>
+      <a href="#" class="text-link">See how it works →</a>
+    </div>
+  </section>
+
+  <section class="sg-section container">
+    <h2 style="font-size: var(--t-2xl); margin-bottom: var(--s-5);">Spacing scale</h2>
+    <div class="sg-row" style="align-items: flex-end;">
+      <div><div style="background:var(--c-blue-light); width: 4px; height: 32px;"></div><code>--s-1 · 4</code></div>
+      <div><div style="background:var(--c-blue-light); width: 8px; height: 32px;"></div><code>--s-2 · 8</code></div>
+      <div><div style="background:var(--c-blue-light); width: 16px; height: 32px;"></div><code>--s-4 · 16</code></div>
+      <div><div style="background:var(--c-blue-light); width: 32px; height: 32px;"></div><code>--s-6 · 32</code></div>
+      <div><div style="background:var(--c-blue-light); width: 64px; height: 32px;"></div><code>--s-8 · 64</code></div>
+      <div><div style="background:var(--c-blue-light); width: 96px; height: 32px;"></div><code>--s-9 · 96</code></div>
+    </div>
+  </section>
+</body>
+</html>
