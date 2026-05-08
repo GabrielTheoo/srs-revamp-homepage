@@ -50,7 +50,7 @@
   color: var(--c-blue-darker);
   display: flex;
   flex-direction: column;
-  font-weight: 500;
+  font-weight: 400;
 }
 .hero__headline span { display: block; }
 .hero__headline .ital {
